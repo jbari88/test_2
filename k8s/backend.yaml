@@ -48,7 +48,9 @@ spec:
     - http:
         paths:
           - backend:
-              serviceName: krampoline
-              servicePort: 8080
-              path: /
-              pathType: Prefix
+              service:
+                  name: krampoline
+                  port:
+                      number: 8080
+            path: /
+            pathType: Prefix
