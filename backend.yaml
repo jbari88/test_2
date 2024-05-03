@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+spec: 
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: idock.daumkakao.io/service-security/hunter-external:dev
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
